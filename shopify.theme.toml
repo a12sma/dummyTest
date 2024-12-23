@@ -1,0 +1,2 @@
+[environments.development]
+store = "https://theme-development-dummy.myshopify.com/shopify "
