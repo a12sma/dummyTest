@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/gift_card.png",
+    "logo": "shopify://shop_images/logo-removebg-preview.png",
     "logo_width": 70,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -405,7 +405,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".header-wrapper:hover {background-color: red; transition: All 0.3s ease-in;}"
+      ".header-wrapper:hover {background-color: brown; transition: All 0.3s ease-in-out;}"
     ]
   }
 }
