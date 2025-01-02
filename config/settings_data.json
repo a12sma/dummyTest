@@ -405,7 +405,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".header-wrapper:hover{background-color : red;}"
+      ".header-wrapper:hover {background-color: red; transition: All 0.3s ease-in;}"
     ]
   }
 }
