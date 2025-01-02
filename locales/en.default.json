@@ -542,6 +542,9 @@
           "one": "Subtotal ( {{count}} product )",
           "other": "Subtotal ( {{count}} products )"
         }
+      },
+      "general": {
+        "choose_shipping_method": " "
       }
     }
   }
