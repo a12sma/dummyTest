@@ -1,0 +1,28 @@
+{% comment %} for the lsit of enteries selected in the metaobject {% endcomment %}
+{% for craftsperson in product.metafields.custom.craftsperson.value %}
+  <p>{{ craftsperson.name }}</p>
+{% endfor %}
+
+{% if shop.metaobjects.craftsperson[section.settings.metaobject_handle].name %}
+  <h2>dynamic meta obejcts</h2>
+  <p>{{ shop.metaobjects.craftsperson[section.settings.metaobject_handle].name }}</p>
+  <p>{{ shop.metaobjects.craftsperson[section.settings.metaobject_handle].bio | metafield_tag }}</p>
+{% endif %}
+{% schema %}
+  {
+    "name": "Dynamic metaobject",
+    "class": "page-width",
+    "settings": [
+      {
+        "type": "text",
+        "label": "metaobject handle",
+        "id": "metaobject_handle"
+      }
+    ],
+    "presets": [
+      {
+        "name": "dynamic metaobjects"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,3 +1,43 @@
+{% comment %} {% if  product.metafields.custom.mixedref_eample.value.system.type == "craftsperson" %}
+  <p>{{ product.metafields.custom.mixedref_eample.value.name}}</p>
+  {% elsif product.metafields.custom.mixedref_eample.value.system.type == "mixed_ref_example" %}
+  <p>{{ product.metafields.custom.mixedref_eample.value.title}}</p>    
+{% endif %}
+{% if product.metafields.custom.example_metafield %}
+  <h2>
+  Example Metafield
+</h2>
+<p>{{product.metafields.custom.example_metafield}}</p>
+{% endif %}
+
+<h2>Product Metafield</h2>
+<p>{{product.metafields.custom.related_product.value.price | money}}</p>
+
+<h2>File Metafield</h2>
+<p>{{product.metafields.custom.product_guide.value.url}}</p>
+<a href="{{product.metafields.custom.product_guide.value.url}}">Downlowd now</a>
+
+<h2>Image File Metafield</h2>
+{{product.metafields.custom.image_metafield |  image_url: width: 500 | image_tag }}
+
+<h2>Date metafield</h2>
+<p>{{product.metafields.custom.date_metafield.value |  date:'%B %d , %Y'}}</p>
+
+<h2>weight metafield</h2>
+<p>{{product.metafields.custom.weight_metafield.value}}</p>
+
+<h2>Rich text Metafield</h2>
+<p>{{product.metafields.custom.richtext_metafield | metafield_tag}}</p>
+
+<h2>Json metafield</h2>
+<p>{{product.metafields.custom.json_metafield.value.age}}</p>
+
+<h2>list metafield</h2>
+{% for item in product.metafields.custom.list_metafield.value %}
+  <p>{{item}}</p>
+{% endfor %} {% endcomment %}
+
+
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -722,6 +762,8 @@
       {{ product | structured_data }}
     </script>
   </div>
+
+ {% render 'product-craftsperson' , {product:product } %}
 </product-info>
 
 {% schema %}

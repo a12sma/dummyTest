@@ -1466,4 +1466,15 @@
       }
     ]
   }
+  ,
+  {
+    "name":"Tutorial",
+    "settings":[
+      {
+        "type": "text",
+        "label": "promotion",
+        "id": "promotion"
+      }
+    ]
+  }
 ]

@@ -1,0 +1,12 @@
+all-products {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  all-products .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--items-per-row), 1fr);
+    gap: 16px;
+  }

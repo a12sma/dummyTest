@@ -1,0 +1,200 @@
+{% comment %} <p>hello world</p>
+<h2>Text settings</h2>
+<p>{{ section.settings.text_settings }}</p>
+
+<h2>Text area setting</h2>
+<p>{{ section.settings.textarea_settings }}</p>
+
+<h2>Rich text settings</h2>
+<div>{{ section.settings.richtext }}</div>
+
+<h2>Number Settings</h2>
+<p>{{ section.settings.number_settings }}</p>
+
+<h2>range settings</h2>
+<p>{{ section.settings.range_settings }}</p>
+
+<h2>select settings</h2>
+<p>{{ section.settings.select_settings }}</p>
+
+<h2>checkbox settings</h2>
+{% if section.settings.checkbox_settings == true %}
+    <p>this is true setting</p>
+    {% else %}
+        <p>this is false</p>
+{% endif %}
+
+<h2>radio settings</h2>
+<p>{{ section.settings.radio_settings }}</p>
+
+<h2>color settings</h2>
+<p>{{section.settings.color_settings}}</p>
+
+<div style="background: {{section.settings.color_background_settings}}">
+<h2>color_background settings</h2>
+<p>{{section.settings.color_background_settings}}</p>
+</div>
+
+{% if section.settings.image_picker_settings %}
+    {{section.settings.image_picker_settings | image_url: width:400 | image_tag }}
+{% endif %}
+
+{% comment %} <div>
+    {{section.settings.video_settings | video_tag: controls:true "height:500px width:500px"}}
+</div> {% endcomment %}
+
+{% for product in section.settings.product_list_settings %}
+    <p>
+        {{product}}|{{section.settings.product_list_settings}}
+        {{section.settings.product_list_settings.variants[0].price | money}}
+    </p>
+{% endfor %}
+
+
+{% schema %}
+  {
+    "name": "Sections Tutorial",
+    "tag": "section",
+    "class": "section-tutorial",
+    "limit": 2,
+    "settings": [
+      {
+        "type": "text",
+        "id": "text_settings",
+        "label": "Theme Settings",
+        "default": "this is my first setting",
+        "info": "this is some helper text"
+      },
+      {
+        "type": "textarea",
+        "id": "textarea_settings",
+        "label": "textarea Settings"
+      },
+      {
+        "type": "richtext",
+        "id": "richtext",
+        "label": "richtext Settings"
+      },
+      {
+        "type": "number",
+        "id": "number_settings",
+        "label": "number Settings"
+      }, {
+        "type": "range",
+        "id": "range_settings",
+        "label": "range Settings",
+        "min": 50,
+        "max": 150,
+        "step": 5,
+        "unit": "px",
+        "default": 60
+      },{
+        "type": "select",
+        "id": "select_settings",
+        "label": "select settings",
+        "options": [
+            {
+                "value": "value_something_1",
+                "label": "value1",
+            },
+            {
+                "value": "value_something_2",
+                "label": "value2",
+            },
+            {
+                "value": "value_something_3",
+                "label": "value3",
+            },
+            {
+                "value": "value_something_4",
+                "label": "value4",
+            },
+        ]
+      },
+      {
+    "type": "checkbox",
+    "label": "checkbox settings",
+    "id": "checkbox_settings",
+    "default":true
+        },
+        {
+    "type": "radio",
+    "label": "radio settings",
+    "id": "radio_settings",
+    "options": [
+         {
+            "value": "value_something_1",
+            "label": "value1",
+        },
+        {
+            "value": "value_something_2",
+            "label": "value2",
+        },
+        {
+            "value": "value_something_3",
+            "label": "value3",
+        },
+        {
+            "value": "value_something_4",
+            "label": "value4",
+        },
+    ]
+        },
+        {
+        "type": "color",
+        "label": "color settings",
+        "id": "color_settings",
+        },
+        {
+        "type": "color_background",
+        "label": "color_background settings",
+        "id": "color_background_settings",
+        },
+        {
+        "type": "image_picker",
+        "label": "image_picker settings",
+        "id": "image_picker_settings",
+        },
+        {
+        "type": "video",
+        "label": "video settings",
+        "id": "video_settings",
+        },
+        {
+            "type": "product_list",
+            "label": "productlist",
+            "id": "product_list_settings"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "section_product",
+            "name":"product",
+            "settings": [
+                {
+                    "type":"product",
+                    "label": "product",
+                    "id": "product"
+                },{
+                    "type": "text",
+                    "id":"title",
+                    "label": "title",
+                    "info":"opitonal will overide the product tile if defined",
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "image",
+                    
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Section-Tutorial",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %} {% endcomment %}

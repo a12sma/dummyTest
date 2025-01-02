@@ -1,0 +1,27 @@
+{% comment %} <div class="page-width">
+    {{section.settings.image | image_url: width: 300 ,height: 300 |image_tag  }}
+    <p>{{section.settings.maker.name}}</p>
+
+    <div>
+        <p>{{section.settings.maker.bio}}</p>
+    </div>
+</div> {% endcomment %}
+
+{% comment %} {% schema %}
+{
+    "name": "metaobjects section",
+    "settings": [
+        {
+            "type": "metaobject",
+            "id":"maker",
+            "label": "Maker",
+            "metaobject_type": "maker"
+        }
+        ],
+        "presets": [
+            {
+                "name": "Metaobjects Section"
+            }
+        ]
+}
+{% endschema %} {% endcomment %}

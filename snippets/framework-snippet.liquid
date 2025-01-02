@@ -1,0 +1,14 @@
+{% comment %} <p>framework</p>
+  <div id="root"></div>
+  {% if template.name == "product" %}
+    <div
+      id="add-to-cart-button"
+      data-variant-id="{{product.first_available_variant.id}}"
+      data-product-titlle="{{product.title}}"></div>
+  {% endif %}
+  
+  <script src="{{"vite-client.js" |  asset_url}}" defer></script>
+  <script src="{{'vite-counter.js' |  asset_url}}" defer></script>
+  {% if template.name == "product" %}
+    <script src="{{'vite-add-to-cart-button.js' |  asset_url}}" defer></script>
+{% endif %} {% endcomment %}

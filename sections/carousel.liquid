@@ -1,0 +1,111 @@
+{{ 'glider.min.css' | asset_url | stylesheet_tag }}
+
+
+<style>
+    .card{
+        border:  1px solid rgb(91, 91, 91);
+        border-radius: 16px;
+        overflow: hidden;
+        padding: 16px;
+    }
+
+    .card_image{
+        width:100;
+        height: auto;
+        aspect-ratio: 1;
+        object-fit: contain;
+    }
+
+    .glider-track{
+        gap: 16px;
+    }
+
+    .glider_container{
+        position: relative;
+    }
+
+    .glider_container .prev,
+    .glider_container .next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .glider_container .prev{
+        left: 0;
+    }
+
+    .glider_container .next{
+        right: 0;
+    }
+</style>
+
+<h2>Carousel</h2>
+
+<div class="page-width" id="{{section.id}}">
+  <div class="glider">
+    {% for block in section.blocks %}
+      {% if block.type == "product" %}
+
+        <a href="{{block.settings.product.url}}" class="product-card">
+            {{ block.settings.product.featured_image |  image_url: width:300 |image_tag  }}
+            <p>{{ block.settings.product.title }}</p>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <button class="prev">Prev</button>
+  <button class="next">Next</button>
+</div>
+<script src="{{'glider.min.js' |  asset_url}}" async></script>
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', ()=>{
+        new Glider(document.querySelector('.glider'),{
+            slidesToShow: {{ section.settings.number_slides_desktop }},
+            arrows:{
+                prev: '#{{section.id}} .prev',
+                next: '#{{section.id}} .next',
+            }
+        })
+    })
+</script>
+
+{% schema %}
+  {
+    "name": "carousel",
+    "settings": [
+      {
+        "type": "number",
+        "id": "number_slides_desktop",
+        "label": "Number of slides (desktop)",
+        "default":1
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "label": "product",
+            "id": "product",
+          }, {
+            "type": "text",
+            "id": "title",
+            "label": "title",
+            "info": "optional. will use the product title if left blank."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "carousel"
+      }
+    ]
+  }
+{% endschema %}
