@@ -404,8 +404,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      ".header-wrapper:hover {background-color: brown; transition: All 0.3s ease-in-out;}"
-    ]
+    "custom_css": []
   }
 }
