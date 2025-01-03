@@ -13,10 +13,7 @@
   "sections": {
     "header": {
       "type": "header",
-      "custom_css": [
-        ".header__active-menu-item {text-decoration: none;}",
-        ".header__active-menu-item:hover {text-decoration: underline;}"
-      ],
+      "custom_css": [],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
