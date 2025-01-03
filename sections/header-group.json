@@ -13,12 +13,15 @@
   "sections": {
     "header": {
       "type": "header",
+      "custom_css": [
+        ".header__active-menu-item {text-decoration : none;}"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
-        "show_line_separator": true,
+        "show_line_separator": false,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": false,
