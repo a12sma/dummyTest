@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("hello")
     const stickyHeader = document.querySelector(".header-wrapper");
 
     window.addEventListener("scroll", () => {
@@ -9,5 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
         stickyHeader.classList.remove("scrolled");
       }
     });
+
+    const details = document.querySelectorAll(".header__submenu details");
+    details.forEach((detail)=>{
+        detail.addEventListener('click', ()=>{
+
+            details.forEach((secDetail)=>{
+                if (secDetail != detail && secDetail.hasAttribute('open')) {
+                    secDetail.removeAttribute('open')
+                }
+            })
+
+        });
+    })
   });
+
   
