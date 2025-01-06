@@ -10,17 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const details = document.querySelectorAll(".header__submenu details");
-    details.forEach((detail)=>{
-        detail.addEventListener('click', ()=>{
 
-            details.forEach((secDetail)=>{
-                if (secDetail != detail && secDetail.hasAttribute('open')) {
-                    secDetail.removeAttribute('open')
+    details.forEach((detail) => {
+        detail.addEventListener('click', (event) => {
+            event.stopPropagation();
+            details.forEach((secDetail) => {
+                if (secDetail !== detail && secDetail.hasAttribute('open')) {
+                    secDetail.removeAttribute('open');
                 }
-            })
-
+                document.addEventListener('click', (event) =>{
+                    if(detail.hasAttribute('open')){
+                        detail.removeAttribute('open')
+                    }
+                })
+            });
         });
-    })
-  });
 
-  
+    });
+});
