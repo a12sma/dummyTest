@@ -37,6 +37,21 @@
         "show_text_below": false
       }
     },
+    "video_HXLec6": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/home-video.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -67,6 +82,7 @@
     }
   },
   "order": [
+    "video_HXLec6",
     "image_banner",
     "featured_collection"
   ]
