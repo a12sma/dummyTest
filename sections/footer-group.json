@@ -13,6 +13,43 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "image_Jba4zw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo_black-removebg-preview.png",
+            "image_width": 220,
+            "alignment": ""
+          }
+        },
+        "text_T3jQ9B": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>4893 NE 59th Avenue</p><p>Hillsboro, OR 97124, United States</p><p></p>"
+          }
+        },
+        "link_list_dX6mBr": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "text_rHNmKR": {
+          "type": "text",
+          "settings": {
+            "heading": "NEWSLETTER",
+            "subtext": "<p>Sign up for email updates on the latest brews</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_Jba4zw",
+        "text_T3jQ9B",
+        "link_list_dX6mBr",
+        "text_rHNmKR"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": false,
