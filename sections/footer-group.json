@@ -13,9 +13,7 @@
   "sections": {
     "footer_custom_bBaQiU": {
       "type": "footer-custom",
-      "settings": {
-        "image": "shopify://shop_images/logo_black-removebg-preview.png"
-      }
+      "settings": {}
     },
     "footer": {
       "type": "footer",

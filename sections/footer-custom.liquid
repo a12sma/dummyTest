@@ -4,7 +4,10 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4">
-        {{ section.settings.image | image_url: width: 220, height: 220 | image_tag }}
+        <img
+          src="{{ section.settings.image | image_url: width: 220 }}"
+          alt="Footer Image"
+          class="footer-cust__logo">
       </div>
       <div class="col-lg-8">asma</div>
     </div>
