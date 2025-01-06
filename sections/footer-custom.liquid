@@ -3,7 +3,9 @@
 <footer class="footer-cust">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        {{ section.settings.image | image_url: width: 220, height: 220 | image_tag }}
+      </div>
       <div class="col-lg-8">asma</div>
     </div>
   </div>
