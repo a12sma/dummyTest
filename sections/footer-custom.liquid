@@ -4,10 +4,17 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4">
-        <img
-          src="{{ section.settings.image | image_url: width: 220 }}"
-          alt="Footer Image"
-          class="footer-cust__logo">
+        <figure>
+          <img
+            src="{{ section.settings.image}}"
+            width="220"
+            height="220"
+            alt="Footer Image"
+            class="footer-cust__logo">
+        </figure>
+        <div>
+          {{ section.settings.Address }}
+        </div>
       </div>
       <div class="col-lg-8">asma</div>
     </div>
@@ -23,6 +30,10 @@
         "type": "image_picker",
         "id": "image",
         "label": "Image"
+      }, {
+        "type": "richtext",
+        "id": "Address",
+        "label": "Address"
       }
     ],
     "presets": [
