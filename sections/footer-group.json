@@ -15,7 +15,7 @@
       "type": "footer-custom",
       "settings": {
         "image": "shopify://shop_images/logo_black-removebg-preview.png",
-        "Address": "<p>4893 NE 59th Avenue</p><p>Hillsboro, OR 97124, United States</p>"
+        "Address": "<p>4893 NE 59th Avenue</p><p>Hillsboro, OR 97124, United States</p><p>800.288.1271</p>"
       }
     },
     "footer": {
