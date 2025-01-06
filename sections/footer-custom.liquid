@@ -1,10 +1,25 @@
 {{ 'footer-custom.css' | asset_url | stylesheet_tag }}
 
-<h2>hello</h2>
+<footer class="footer-cust">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-8">asma</div>
+    </div>
+  </div>
+</footer>
+
 
 {% schema %}
   {
     "name": "Footer Custom",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
     "presets": [
       {
         "name": "Footer Custom"
