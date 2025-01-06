@@ -22,17 +22,25 @@
             "alignment": ""
           }
         },
-        "link_list_tiHRtw": {
+        "link_list_pnTLVy": {
           "type": "link_list",
           "settings": {
             "heading": "Quick links",
             "menu": "footer"
           }
+        },
+        "text_Gr6fCq": {
+          "type": "text",
+          "settings": {
+            "heading": "NEWSLETTER",
+            "subtext": "<p>Sign up for email updates on the latest brews</p>"
+          }
         }
       },
       "block_order": [
         "image_xdFdfn",
-        "link_list_tiHRtw"
+        "link_list_pnTLVy",
+        "text_Gr6fCq"
       ],
       "settings": {
         "color_scheme": "scheme-1",
