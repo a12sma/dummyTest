@@ -58,6 +58,7 @@
         style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
       {% endif %}
     >
+    {%- if section.settings.video != null and section.settings.video_url == null -%}
       <button
         id="Deferred-Poster-Modal-{{ video_id }}"
         class="video-section__poster media deferred-media__poster media--landscape"
@@ -79,6 +80,7 @@
           </span>
         </span>
       </button>
+    {%- endif -%}
       <template>
         {%- if section.settings.video == null and section.settings.video_url != null -%}
           {%- liquid
@@ -104,18 +106,20 @@
               title="{{ section.settings.description | escape }}"
             ></iframe>
           {%- endif -%}
-        {%- else -%}
-          {{
+        {%- endif -%}
+      </template>
+      asma{{section.settings.video_url}}
+      {%- if section.settings.video != null and section.settings.video_url == null -%}
+      {{
             section.settings.video
             | video_tag:
               image_size: '1100x',
               autoplay: true,
               loop: section.settings.enable_video_looping,
-              controls: true,
+              controls: false,
               muted: false
           }}
         {%- endif -%}
-      </template>
     </deferred-media>
   </div>
 </div>
