@@ -1,7 +1,28 @@
+.footer-cust{
+    padding: 2rem 0 ;
+}
 .footer-cust__logo{
-    width: 220px;
+    width: 250px;
     height: auto;
     max-width: 100%;
+}
+
+/* .footer-cust__firhalf{
+    background-image: url('./footer-background-first-col.webp');
+} */
+
+.footer-cust__address{
+    margin-top: 5rem;
+}
+
+.footer-cust__address p{
+    color: #8d4b2e;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.footer-cust__address p:last-child{
+    margin-top: 2.5rem;
 }
 
 @media (min-width: 1400px) {

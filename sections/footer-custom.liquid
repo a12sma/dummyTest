@@ -3,23 +3,26 @@
 <footer class="footer-cust">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-4 footer-cust__firhalf">
         <figure>
           <img
             src="{{ section.settings.image| image_url }}"
-            width="220"
+            width="250"
             height="220"
             alt="Footer Image"
             class="footer-cust__logo">
         </figure>
-        <div>
-            <p class="address">
+        <div class="footer-cust__address">
                 {{ section.settings.Address }}
-            </p>
         </div>
       </div>
-      <div class="col-lg-8">asma</div>
-    </div>
+      <div class="col-lg-8">
+        <div class="col-lg-4 bg-primary">
+          {{section.settings.menu}}
+        </div>
+        <div class="col-lg-8 bg-success"></div>
+      </div>
+      </div>
   </div>
 </footer>
 
@@ -36,7 +39,11 @@
         "type": "richtext",
         "id": "Address",
         "label": "Address",
-        
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "footer menu"
       }
     ],
     "presets": [
