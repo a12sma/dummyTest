@@ -18,8 +18,8 @@
       </div>
       <div class="col-lg-8">
         <div class="col-lg-4 bg-primary">
-          {% for item in section.settings.menu %}
-            <li><a href="{{item.url}}">{{item}}</a></li>
+          {% for item in linklists[section.settings.menu].links %}
+            <li><a href="{{item.url}}">{{item.title}}</a></li>
           {% endfor %}
         </div>
         <div class="col-lg-8 bg-success"></div>
