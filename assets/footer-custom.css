@@ -1,5 +1,6 @@
 .footer-cust{
     padding: 2rem 0 ;
+    overflow: hidden;
 }
 .footer-cust__logo{
     width: 250px;
@@ -25,8 +26,88 @@
     margin-top: 2.5rem;
 }
 
-@media (min-width: 1400px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 1420px;
+.footer-cust__sechalf{
+    background-color: #402E22;
+    border-top-left-radius: 5rem;
+    padding: 5.5rem 0 3rem 0;
+}
+
+.footer-cust__footmenu{
+    padding-left: 5rem;
+    border-right: 1px solid rgb(220, 220, 220);
+}
+
+.footer-cust__menu{
+    padding: 0;
+    margin: 0;
+}
+
+.footer-cust__menu__item{
+    list-style: none;
+    margin-bottom: 7px;
+}
+
+.footer-cust__menu__item__link{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.footer-cust__menu__item__link:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-cust__subs {
+}
+
+.footer-cust__subs h5{
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.footer-cust__subs p{
+    color: white;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.footer-cust__sub-input{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-cust__sub-input input{
+    border: 1px solid white;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    flex: 0.79;
+    padding: 0.5rem 2rem;
+
+}
+
+.footer-cust__sub-input .button{
+    padding: 1.3rem 4rem;
+    background: white;
+    color: #8d4b2e;
+    text-transform: uppercase;
+}
+
+.footer-cust__follow .heading{
+    margin-top: 4.3rem;
+    color: white;
+    font-weight: 300;
+}
+
+@media (min-width: 990px) {
+    .footer-cust__inner{
+        padding-left: 5rem;
     }
 }

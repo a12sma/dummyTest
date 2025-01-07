@@ -1,39 +1,58 @@
 {{ 'footer-custom.css' | asset_url | stylesheet_tag }}
 
 <footer class="footer-cust">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 footer-cust__firhalf">
-        <figure>
-          <img
-            src="{{ section.settings.image| image_url }}"
-            width="250"
-            height="220"
-            alt="Footer Image"
-            class="footer-cust__logo">
-        </figure>
-        <div class="footer-cust__address">
-                {{ section.settings.Address }}
-        </div>
-      </div>
-      <div class="col-lg-8">
-        <div class="col-lg-4 bg-danger">
-          <div>
-          <ul>
-          {% for item in linklists[section.settings.menu].links %}
-            <li><a href="{{item.url}}">{{item.title}}</a></li>
-          {% endfor %}
-          </ul>
+  <div class="container-fluid">
+    <div class="footer-cust__inner">
+      <div class="row">
+        <div class="col-lg-4 footer-cust__firhalf">
+          <figure>
+            <img
+              src="{{ section.settings.image| image_url }}"
+              width="250"
+              height="220"
+              alt="Footer Image"
+              class="footer-cust__logo">
+          </figure>
+          <div class="footer-cust__address">
+            {{ section.settings.Address }}
           </div>
         </div>
-        <div class="col-lg-8 bg-success">
-          <div>
-          {{section.settings.Heading_Subscription}}
-          {{section.settings.subText}}
+        <div class="col-lg-8 footer-cust__sechalf">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="footer-cust__footmenu">
+                <ul class="footer-cust__menu">
+                  {% for item in linklists[section.settings.menu].links %}
+                    <li class="footer-cust__menu__item">
+                      <a class="footer-cust__menu__item__link" href="{{item.url}}">{{ item.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="footer-cust__subs">
+                {{ section.settings.Heading_Subscription }}
+                {{ section.settings.subText }}
+              </div>
+              <div class="footer-cust__sub-input">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="input"
+                  placeholder="Enter Your Email Address">
+                <button class="button">SUBSCRIBE!</button>
+              </div>
+              <div class="footer-cust__follow">
+                <h4 class="heading">FOLLOW US:</h4>
+                {{ section.settings.show_social }}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
   </div>
 </footer>
 
@@ -46,10 +65,11 @@
         "type": "image_picker",
         "id": "image",
         "label": "Image"
-      }, {
+      },
+      {
         "type": "richtext",
         "id": "Address",
-        "label": "Address",
+        "label": "Address"
       },
       {
         "type": "link_list",
@@ -59,12 +79,16 @@
       {
         "type": "richtext",
         "id": "Heading_Subscription",
-        "label": "Heading_Subscription",
-      },
-      {
+        "label": "Heading_Subscription"
+      }, {
         "type": "richtext",
         "id": "subText",
-        "label": "subText",
+        "label": "subText"
+      }, {
+        "type": "checkbox",
+        "id": "show_social",
+        "default": true,
+        "label": "t:sections.footer.settings.show_social.label"
       }
     ],
     "presets": [
