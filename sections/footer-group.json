@@ -18,7 +18,8 @@
         "Address": "<p>4893 NE 59th Avenue</p><p>Hillsboro, OR 97124, United States</p><p>800.288.1271</p>",
         "menu": "footer",
         "Heading_Subscription": "<h5>Newsletter</h5>",
-        "subText": "<p>Sign up for email updates on the latest brews</p>"
+        "subText": "<p>Sign up for email updates on the latest brews</p>",
+        "show_social": true
       }
     },
     "footer": {
