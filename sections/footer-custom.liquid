@@ -18,12 +18,19 @@
       </div>
       <div class="col-lg-8">
         <div class="col-lg-4 bg-danger">
+          <div>
+          <ul>
           {% for item in linklists[section.settings.menu].links %}
             <li><a href="{{item.url}}">{{item.title}}</a></li>
           {% endfor %}
+          </ul>
+          </div>
         </div>
         <div class="col-lg-8 bg-success">
-          
+          <div>
+          {{section.settings.Heading_Subscription}}
+          {{section.settings.subText}}
+          </div>
         </div>
       </div>
       </div>
@@ -48,6 +55,16 @@
         "type": "link_list",
         "id": "menu",
         "label": "footer menu"
+      },
+      {
+        "type": "richtext",
+        "id": "Heading_Subscription",
+        "label": "Heading_Subscription",
+      },
+      {
+        "type": "richtext",
+        "id": "subText",
+        "label": "subText",
       }
     ],
     "presets": [
