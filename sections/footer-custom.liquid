@@ -47,6 +47,10 @@
               <div class="footer-cust__follow">
                 <h4 class="heading">FOLLOW US:</h4>
                 {{ section.settings.show_social }}
+                {%- if section.settings.show_social -%}
+                  {%- render 'social-icons'
+                    , class: 'footer__list-social' -%}
+                {%- endif -%}
               </div>
             </div>
           </div>
