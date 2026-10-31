@@ -763,7 +763,7 @@
     </script>
   </div>
 
- {% render 'product-craftsperson' , {product:product } %}
+ {% render 'product-craftsperson', product: product %}
 </product-info>
 
 {% schema %}
@@ -2300,3 +2300,13 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'product-craftsperson' , {product:product } %}"
+  to: "{% render 'product-craftsperson', product: product %}"
+  position: 41854..41907
+{% endcomment %}
